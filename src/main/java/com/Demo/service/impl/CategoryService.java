@@ -1,0 +1,21 @@
+package com.Demo.service.impl;
+
+import java.util.List;
+
+import javax.inject.Inject;
+
+import com.Demo.dao.ICategoryDao;
+import com.Demo.model.CategoryModel;
+import com.Demo.service.ICategoryService;
+
+public class CategoryService implements ICategoryService{
+
+	@Inject
+	private ICategoryDao categoryDao;
+	@Override
+	public List<CategoryModel> findAll() {
+		// TODO Auto-generated method stub
+		return categoryDao.findAll();
+	}
+
+}
